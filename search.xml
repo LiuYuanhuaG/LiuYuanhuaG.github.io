@@ -1279,30 +1279,6 @@
       </tags>
   </entry>
   <entry>
-    <title>两数之和</title>
-    <url>/superLiuYuanhua.github.io</url>
-    <content><![CDATA[<h2 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h2><ul>
-<li>给定一个整数数组 <code>nums</code> 和一个整数目标值 <code>target</code></li>
-<li>请你在该数组中找出 和为目标值 <code>target</code>  的那 两个 整数，并返回它们的数组下标。<ul>
-<li>例如 <code>nums = [2,7,11,15], target = 9,</code> 结果是: 返回 <code>[0, 1]</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2. 解决方法"></a>2. 解决方法</h2><h3 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> nums = [<span class="number">2</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">15</span>]</span><br><span class="line"><span class="keyword">const</span> target = <span class="number">13</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> hash = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">  <span class="keyword">let</span> diff = target - nums[i]</span><br><span class="line">  <span class="keyword">if</span>(hash.has(diff))&#123;</span><br><span class="line">    <span class="keyword">return</span> [hash.get(diff),i]</span><br><span class="line">  &#125;</span><br><span class="line">  hash.set(nums[i],i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="3-题源"><a href="#3-题源" class="headerlink" title="3. 题源"></a>3. 题源</h2><ul>
-<li><a href="https://leetcode-cn.com/problems/two-sum/">两数之和</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>leetcode</category>
-      </categories>
-      <tags>
-        <tag>leetcode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数组去重</title>
     <url>/superLiuYuanhua.github.io</url>
     <content><![CDATA[<h2 id="1-解决方法"><a href="#1-解决方法" class="headerlink" title="1. 解决方法"></a>1. 解决方法</h2><h3 id="1-1-通过-Set"><a href="#1-1-通过-Set" class="headerlink" title="1.1 通过 Set"></a>1.1 通过 Set</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 一般工作中我都直接采用 set 进行集合运算 比较方便和容易理解</span></span><br><span class="line"><span class="keyword">const</span> scores = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"><span class="keyword">let</span> expectNumber = [...new <span class="built_in">Set</span>([...scores])].length <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
@@ -1318,6 +1294,30 @@
 <li>不可能为<code>[2.5,...]</code></li>
 </ul>
 </li>
+</ul>
+]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两数之和</title>
+    <url>/superLiuYuanhua.github.io</url>
+    <content><![CDATA[<h2 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h2><ul>
+<li>给定一个整数数组 <code>nums</code> 和一个整数目标值 <code>target</code></li>
+<li>请你在该数组中找出 和为目标值 <code>target</code>  的那 两个 整数，并返回它们的数组下标。<ul>
+<li>例如 <code>nums = [2,7,11,15], target = 9,</code> 结果是: 返回 <code>[0, 1]</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2. 解决方法"></a>2. 解决方法</h2><h3 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> nums = [<span class="number">2</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">15</span>]</span><br><span class="line"><span class="keyword">const</span> target = <span class="number">13</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> hash = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">  <span class="keyword">let</span> diff = target - nums[i]</span><br><span class="line">  <span class="keyword">if</span>(hash.has(diff))&#123;</span><br><span class="line">    <span class="keyword">return</span> [hash.get(diff),i]</span><br><span class="line">  &#125;</span><br><span class="line">  hash.set(nums[i],i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="3-题源"><a href="#3-题源" class="headerlink" title="3. 题源"></a>3. 题源</h2><ul>
+<li><a href="https://leetcode-cn.com/problems/two-sum/">两数之和</a></li>
 </ul>
 ]]></content>
       <categories>
